@@ -304,7 +304,7 @@ def test_14():
     }
 
 
-test = {
+"""test = {
     "01": test_01,
     "02": test_02,
     "03": test_03,
@@ -321,4 +321,10 @@ test = {
     "14": test_14,
 }[sys.argv[1]]
 
-test()
+test()"""
+def test():
+    conn, _ = load_data()
+    with open("pregunta_11.sql", encoding="utf-8") as file:
+        query = file.read()
+    return pd.read_sql_query(query, conn).to_dict()
+print(test())
