@@ -38,4 +38,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
-SELECT strftime('%Y',c14) as YEAR, COUNT(*) as CANT  from tbl1 WHERE YEAR="2018" GROUP BY YEAR;
+SELECT cast(strftime('%Y',c14) as INT) as YEAR, COUNT(*) as CANT  from tbl1 WHERE YEAR="2018" GROUP BY YEAR;
