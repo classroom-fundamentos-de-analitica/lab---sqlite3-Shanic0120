@@ -321,4 +321,4 @@ test = {
     "14": test_14,
 }[sys.argv[1]]
 
-test()
+test
